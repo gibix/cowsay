@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
-	.usage(`
+  .usage(`
 Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text
 		
 If any command-line arguments are left over after all switches have been processed, they become the cow's message.
@@ -78,6 +78,6 @@ function say() {
 function listCows() {
   require('./index').list((err, list) => {
     if (err) throw new Error(err);
-    console.log(list.join('  '));
+    console.log(list.join(','));
   });
 }
